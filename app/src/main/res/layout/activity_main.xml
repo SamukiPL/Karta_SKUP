@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/itemColor"
+    tools:context="kartaskup.samuki.me.kartaskup.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/top_panel"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="5sp"
+                    android:paddingStart="5sp"
+                    android:paddingRight="5sp"
+                    android:paddingEnd="5sp"
+                    android:textSize="18sp"
+                    android:textColor="#FFF"
+                    android:background="@color/itemColorDark"
+                    android:layout_weight="0.35"
+                    android:textAlignment="center"
+                    android:gravity="center_vertical"
+                    android:text="Portfel"
+                    />
+
+                <TextView
+                    android:id="@+id/wallet"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="5sp"
+                    android:paddingStart="5sp"
+                    android:paddingRight="5sp"
+                    android:paddingEnd="5sp"
+                    android:textSize="18sp"
+                    android:textColor="#FFF"
+                    android:background="@color/itemColorDark"
+                    android:layout_weight="0.35"
+                    android:textAlignment="center"
+                    android:gravity="center_vertical" />
+
+                <Button
+                    android:text="Dodaj kartę"
+                    android:textColor="#FFF"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/button3"
+                    android:layout_weight="1"
+                    android:onClick="pinCard"
+                    android:clickable="true"
+                    android:background="@color/itemColorDark"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tickets_in_use"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/emptyPlace">
+
+                <TextView
+                    android:id="@+id/tickets_in_use_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:ems="10"
+                    android:layout_weight="1"
+                    android:textSize="25sp"
+                    android:text="Bilety Zakodowane"
+                    android:textColor="#FFF"
+                    android:background="@color/colorPrimaryDark"/>
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/emptyPlace"
+                    android:paddingBottom="2dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="5sp"
+                        android:paddingStart="5sp"
+                        android:paddingRight="5sp"
+                        android:paddingEnd="5sp"
+                        android:textSize="18sp"
+                        android:textColor="#FFF"
+                        android:background="@color/colorPrimary"
+                        android:layout_weight="0.35"
+                        android:textAlignment="center"
+                        android:gravity="center_vertical"
+                        android:text="Miasto"/>
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="5sp"
+                        android:paddingStart="5sp"
+                        android:paddingRight="5sp"
+                        android:paddingEnd="5sp"
+                        android:textSize="18sp"
+                        android:textColor="#FFF"
+                        android:background="@color/colorPrimary"
+                        android:layout_weight="0.35"
+                        android:textAlignment="center"
+                        android:gravity="center_vertical"
+                        android:text="Pozostały czas"/>
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5sp"
+                        android:paddingStart="5sp"
+                        android:paddingRight="5sp"
+                        android:paddingEnd="5sp"
+                        android:textSize="18sp"
+                        android:textColor="#FFF"
+                        android:background="@color/colorPrimary"
+                        android:layout_weight="0.30"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:text="Możliwych użyć" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tickets_not_in_use"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark">
+
+                <TextView
+                    android:id="@+id/tickets_not_in_use_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:ems="10"
+                    android:layout_weight="1"
+                    android:textSize="25sp"
+                    android:text="Bilety Niezakodowane"
+                    android:textColor="#FFF"
+                    android:background="@color/colorPrimaryDark"/>
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/emptyPlace"
+                    android:paddingBottom="2dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="5sp"
+                        android:paddingStart="5sp"
+                        android:paddingRight="5sp"
+                        android:paddingEnd="5sp"
+                        android:textSize="18sp"
+                        android:textColor="#FFF"
+                        android:background="@color/colorPrimary"
+                        android:layout_weight="0.35"
+                        android:textAlignment="center"
+                        android:gravity="center_vertical"
+                        android:text="Miasto"/>
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="5sp"
+                        android:paddingStart="5sp"
+                        android:paddingRight="5sp"
+                        android:paddingEnd="5sp"
+                        android:textSize="18sp"
+                        android:textColor="#FFF"
+                        android:background="@color/colorPrimary"
+                        android:layout_weight="0.35"
+                        android:textAlignment="center"
+                        android:gravity="center_vertical"
+                        android:text="Pozostały czas"/>
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5sp"
+                        android:paddingStart="5sp"
+                        android:paddingRight="5sp"
+                        android:paddingEnd="5sp"
+                        android:textSize="18sp"
+                        android:textColor="#FFF"
+                        android:background="@color/colorPrimary"
+                        android:layout_weight="0.30"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:text="Możliwych użyć" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/loading"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>
